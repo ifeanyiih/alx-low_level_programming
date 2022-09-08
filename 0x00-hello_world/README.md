@@ -14,4 +14,7 @@ Below is a list of the files and a brief description with it.
 	- Uses the function printf
 	- Returns 0
 	- Compiles without warning when using the `-Wall gcc` option.
+- **6-size.c**: This C program prints the size of various types on the computer it is compiled and run on.
+	- Returns 0
+	- I installed the package `libc6-dev-i386` to test the `-m32 gcc` option
 
