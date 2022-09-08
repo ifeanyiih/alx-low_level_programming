@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S -Xassembler intel $CFILE
+gcc -masm=intel -S $CFILE
