@@ -10,4 +10,8 @@ Below is a list of the files and a brief description with it.
 - **3-name**: This script compiles a C file and creates an executable named `cisfun`
 - **4-puts.c**: This C program prints exactly "Programming is like building a multilingual puzzle\n"
 	- Uses the function puts
+- **5-printf.c**: This C program prints exactly "with proper grammar, but the outcome is a piece of art," followed by a new line.
+	- Uses the function printf
+	- Returns 0
+	- Compiles without warning when using the `-Wall gcc` option.
 
