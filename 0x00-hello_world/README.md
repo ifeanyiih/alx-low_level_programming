@@ -17,4 +17,5 @@ Below is a list of the files and a brief description with it.
 - **6-size.c**: This C program prints the size of various types on the computer it is compiled and run on.
 	- Returns 0
 	- I installed the package `libc6-dev-i386` to test the `-m32 gcc` option
+- **100-intel**: This script generate the assembly code (intel syntax) of a C code and saves it as an output file
 
