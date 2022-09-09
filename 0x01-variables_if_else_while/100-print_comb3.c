@@ -11,7 +11,7 @@ int main(void)
 	int d2;
 	for (d1 = 48; d1 < '9'; ++d1)
 	{
-		for (d2 = 48; d2 <= '9'; ++d2)
+		for (d2 = d1 + 1; d2 <= '9'; ++d2)
 		{
 			if (d1 == d2)
 			{
