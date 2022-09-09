@@ -11,12 +11,14 @@ int main(void)
 	int d2;
 	int d3;
 	int d4;
+	int count;
 
 	d4 = 49;
+	count = 50;
 
 	for (d1 = 48; d1 <= '9'; ++d1)
 	{
-		for (d2 = 48; d2 <= '9'; ++d2)
+		for (d2 = 48; d2 < '9'; ++d2)
 		{
 			for (d3 = 48; d3 <= '9'; ++d3)
 			{
@@ -36,9 +38,9 @@ int main(void)
 					}
 					++d4;
 				}
-				d4 = d1;
+				d4 = 48;
 			}
-			d4 = d1 + 2;
+			d4 = count++;
 		}
 	}
 
