@@ -18,7 +18,7 @@ int main(void)
 		{
 			for (d3 = 48; d3 <= '9'; ++d3)
 			{
-				for (d4 = 48 ; d4 <= '9'; ++d4)
+				for (d4 = 48; d4 <= '9'; ++d4)
 				{
 					if (d3 == 48 && d4 == 48)
 						continue;
@@ -36,6 +36,7 @@ int main(void)
 						putchar(' ');
 					}
 				}
+				d4 = 48;
 			}
 		}
 	}
