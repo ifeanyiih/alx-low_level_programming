@@ -7,6 +7,10 @@
  */
 int main(void)
 {
+	int d1;
+	int d2;
+	int d3;
+
 	for (int d1 = 48; d1 < '8'; ++d1)
 	{
 		for (int d2 = d1 + 1; d2 < '9'; ++d2)
