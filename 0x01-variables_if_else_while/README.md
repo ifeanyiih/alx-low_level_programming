@@ -22,4 +22,5 @@ Below is a list of files and brief descriptions with it.
 - **9-print_comb.c**: This C program prints all possible combinations of single digit numbers.
 - **100-print_comb3.c**: prints all possible different combinations of two digits: the two digits should not be the same.
 - **101-print_com4.c**: prints all possible different combinations of three digits
+- **102-print_comb5.c**: prints all possible combinations of two two-digit numbers
 
