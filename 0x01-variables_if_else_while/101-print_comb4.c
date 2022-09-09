@@ -11,13 +11,13 @@ int main(void)
 	int d2;
 	int d3;
 
-	for (int d1 = 48; d1 < '8'; ++d1)
+	for (d1 = 48; d1 < '8'; ++d1)
 	{
-		for (int d2 = d1 + 1; d2 < '9'; ++d2)
+		for (d2 = d1 + 1; d2 < '9'; ++d2)
 		{
-			for (int d3 = d2 + 1; d3 <= '9'; ++d3)
+			for (d3 = d2 + 1; d3 <= '9'; ++d3)
 			{
-				if (d1 == d2 == d3)
+				if (d1 == d2 && d2 == d3)
 					continue;
 
 				putchar(d1);
