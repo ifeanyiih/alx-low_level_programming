@@ -9,4 +9,7 @@ Below is a list of files and brief descriptions with it.
 - **2-print_alphabet.c**: This C program prints the alphabet in lowercase, followed by a new line.
 	- Used only `putchar` function
 	- Used `putchar` function only twice in code
+- **3-print_alphabets.c**: This C program prints the alpabets: lowercase and uppercase, and a new line.
+	- Used only `putchar` function
+	- Used `putchar` function only twice in code
 
