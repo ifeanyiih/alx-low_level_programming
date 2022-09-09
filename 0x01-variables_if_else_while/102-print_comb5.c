@@ -12,17 +12,16 @@ int main(void)
 	int d3;
 	int d4;
 
+	d4 = 49;
+
 	for (d1 = 48; d1 <= '9'; ++d1)
 	{
 		for (d2 = 48; d2 < '9'; ++d2)
 		{
 			for (d3 = 48; d3 <= '9'; ++d3)
 			{
-				for (d4 = 48; d4 <= '9'; ++d4)
+				while (d4 <= '9')
 				{
-					if (d3 == 48 && d4 == 48)
-						continue;
-
 					putchar(d1);
 					putchar(d2);
 					putchar(' ');
@@ -35,9 +34,11 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 					}
+					++d4;
 				}
-				d4 = 48;
+				d4 = d1;
 			}
+			d4 = d1 + 2;
 		}
 	}
 	return (0);
