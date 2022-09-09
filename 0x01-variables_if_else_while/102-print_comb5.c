@@ -16,7 +16,7 @@ int main(void)
 
 	for (d1 = 48; d1 <= '9'; ++d1)
 	{
-		for (d2 = 48; d2 < '9'; ++d2)
+		for (d2 = 48; d2 <= '9'; ++d2)
 		{
 			for (d3 = 48; d3 <= '9'; ++d3)
 			{
@@ -41,5 +41,6 @@ int main(void)
 			d4 = d1 + 2;
 		}
 	}
+
 	return (0);
 }
