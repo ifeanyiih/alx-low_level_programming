@@ -20,3 +20,5 @@ Below is a list of files and brief descriptions with it.
 - **7-print_tebahpla.c**: This C program prints the alphabets from 'z' to 'a', and a new line.
 - **8-print_base16.c**: This C program prints the numbers of base 16, starting from 0.
 - **9-print_comb.c**: This C program prints all possible combinations of single digit numbers.
+- **100-print_comb3.c**: prints all possible different combinations of two digits: the two digits should not be the same.
+
