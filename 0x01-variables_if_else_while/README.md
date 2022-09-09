@@ -16,4 +16,5 @@ Below is a list of files and brief descriptions with it.
 	- Used only `putchar` function
 	- Used `putchar` function only twice in code
 - **5-print_numbers.c**: This C program prints all single digit numbers of base 10 starting from 0.
+- **6-print_numberz.c**: This C program prints all single digit numbers of base 10 starting from 0, using `putchar` function.
 
