@@ -18,15 +18,18 @@ int main(void)
 		{
 			for (d3 = 48; d3 <= '9'; ++d3)
 			{
-				for (d4 = 49 ; d4 <= '9'; ++d4)
+				for (d4 = 48 ; d4 <= '9'; ++d4)
 				{
+					if (d3 == 48 && d4 == 48)
+						continue;
+
 					putchar(d1);
 					putchar(d2);
 					putchar(' ');
 
 					putchar(d3);
 					putchar(d4);
-					
+
 					if (!(d1 == '9' && d2 == '8' && d3 == '9' && d4 == '9'))
 					{
 						putchar(',');
