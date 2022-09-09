@@ -12,4 +12,7 @@ Below is a list of files and brief descriptions with it.
 - **3-print_alphabets.c**: This C program prints the alpabets: lowercase and uppercase, and a new line.
 	- Used only `putchar` function
 	- Used `putchar` function only twice in code
+- **4-print_alphabt.c**: This C program prints the alphabets in lowercase, excluding 'e' and 'q'.
+	- Used only `putchar` function
+	- Used `putchar` function only twice in code
 
