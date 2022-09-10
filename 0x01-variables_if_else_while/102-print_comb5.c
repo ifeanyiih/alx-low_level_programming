@@ -11,26 +11,23 @@ int main(void)
 	int d2;
 	int d3;
 	int d4;
-	int count;
 
 	d4 = 49;
-	count = 50;
-
 	for (d1 = 48; d1 <= '9'; ++d1)
 	{
-		for (d2 = 48; d2 < '9'; ++d2)
+		for (d2 = 48; d2 <= '9'; ++d2)
 		{
+			if (d2 == '9' && d1 == '9')
+				break;
 			for (d3 = 48; d3 <= '9'; ++d3)
 			{
-				while (d4 <= '9')
+				for (d4 = 49; d4 <= '9'; ++d4)
 				{
 					putchar(d1);
 					putchar(d2);
 					putchar(' ');
-
 					putchar(d3);
 					putchar(d4);
-
 					if (!(d1 == '9' && d2 == '8' && d3 == '9' && d4 == '9'))
 					{
 						putchar(',');
@@ -40,9 +37,8 @@ int main(void)
 				}
 				d4 = 48;
 			}
-			d4 = count++;
 		}
 	}
-
+	putchar('\n');
 	return (0);
 }
