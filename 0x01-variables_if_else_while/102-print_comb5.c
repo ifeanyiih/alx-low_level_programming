@@ -1,44 +1,48 @@
 #include <stdio.h>
 
 /**
-* main - Entry Point
-*
-* Return: Always 0 (success)
-*/
+ * main - Prints numbers between 00 to 99.
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int d1;
-	int d2;
-	int d3;
-	int d4;
+int i, e, g, h, op1, op2;
 
-	d4 = 49;
-	for (d1 = 48; d1 <= '9'; ++d1)
+i = e = g = h = 48;
+while (h < 58)
+{
+	g = 48;
+	while (g < 58)
 	{
-		for (d2 = 48; d2 <= '9'; ++d2)
+		e = 48;
+		while (e < 58)
 		{
-			d4 = d2 + 1;
-			if (d2 == '9' && d1 == '9')
-				break;
-			for (d3 = 48; d3 <= '9'; ++d3)
+			i = 48;
+			while (i < 58)
 			{
-				for (; d4 <= '9'; ++d4)
+				op1 = (h * 10) + g;
+				op2 = (e * 10) + i;
+				if (op1 < op2)
 				{
-					putchar(d1);
-					putchar(d2);
+					putchar(h);
+					putchar(g);
 					putchar(' ');
-					putchar(d3);
-					putchar(d4);
-					if (!(d1 == '9' && d2 == '8' && d3 == '9' && d4 == '9'))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					putchar(e);
+					putchar(i);
+					if (h == 57 && g == 56 && e == 57 && i == 57)
+						break;
+					putchar(',');
+					putchar(' ');
 				}
-				d4 = 48;
+				i++;
 			}
+			e++;
 		}
+		g++;
 	}
-	putchar('\n');
-	return (0);
+	h++;
+}
+putchar('\n');
+return (0);
 }
