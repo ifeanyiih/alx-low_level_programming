@@ -9,7 +9,7 @@ int sum_natural(void);
 */
 int main(void)
 {
-	printf("%d", sum_natural());
+	printf("%d\n", sum_natural());
 	return (0);
 }
 
