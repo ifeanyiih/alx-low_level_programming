@@ -10,3 +10,4 @@ This directory contains project based learning files which builds on concepts pr
 - **4-isalpha.c**: checks if a given character is alphabetic, regardless of case
 - **5-sign.c**: checks and prints the sign of a given number.
 - **6-abs.c**: returns the absolute value of a given interger.
+- **7-print_last_digit.c**: returns and prints the last digit of a given number
