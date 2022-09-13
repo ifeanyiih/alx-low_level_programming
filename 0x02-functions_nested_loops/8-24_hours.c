@@ -13,6 +13,10 @@ void jack_bauer(void)
 		d2 = 48;
 		while (d2 <= '9')
 		{
+			if (d1 == '2' && d2 == '3' && d3 == '5' && d4 == '9')
+			{
+				break;
+			}
 			d3 = 48;
 			while (d3 <= '5')
 			{
