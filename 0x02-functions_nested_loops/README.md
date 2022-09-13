@@ -11,3 +11,4 @@ This directory contains project based learning files which builds on concepts pr
 - **5-sign.c**: checks and prints the sign of a given number.
 - **6-abs.c**: returns the absolute value of a given interger.
 - **7-print_last_digit.c**: returns and prints the last digit of a given number
+- **8-24_hours.c**: prints minutes and hours in 24 hours.
