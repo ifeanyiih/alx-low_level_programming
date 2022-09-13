@@ -40,5 +40,6 @@ void times_table(void)
 				_putchar(48 + rem);
 			}
 		}
+		_putchar('\n');
 	}
 }
