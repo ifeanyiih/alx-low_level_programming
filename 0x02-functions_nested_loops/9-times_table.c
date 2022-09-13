@@ -21,7 +21,7 @@ void times_table(void)
 				_putchar(',');
 				_putchar(' ');
 			}
-			else if (mu > 10 && j != 9)
+			else if (mul > 10 && j != 9)
 			{
 				rem = mul % 10;
 				mul /= 10;
