@@ -11,6 +11,6 @@ int print_last_digit(int num)
 	int d;
 
 	d = num % 10;
-	_putchar(48 + d);
+	_putchar('0' + d);
 	return (d);
 }
