@@ -4,4 +4,5 @@ This directory contains project based learning files which builds on concepts pr
 ---
 
 - **0-putchar.c**: Prints `_putchar`, followed by a new line
+- **1-print_alphabet**: Prints lower case alphabets from a to z
 
