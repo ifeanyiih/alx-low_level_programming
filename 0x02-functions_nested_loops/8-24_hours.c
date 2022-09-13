@@ -14,7 +14,7 @@ void jack_bauer(void)
 		while (d2 <= '9')
 		{
 			d3 = 48;
-			while (d3 <= '9')
+			while (d3 <= '5')
 			{
 				d4 = 48;
 				while (d4 <= '9')
@@ -26,10 +26,6 @@ void jack_bauer(void)
 					_putchar(d4);
 					_putchar('\n');
 
-					if (d1 == '2' && d2 = '3' && d3 = '5' && d4 = '9')
-					{
-						break;
-					}
 					++d4;
 				}
 				++d3;
