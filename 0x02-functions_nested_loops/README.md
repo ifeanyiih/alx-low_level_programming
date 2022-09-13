@@ -13,3 +13,4 @@ This directory contains project based learning files which builds on concepts pr
 - **7-print_last_digit.c**: returns and prints the last digit of a given number
 - **8-24_hours.c**: prints minutes and hours in 24 hours.
 - **9-times_table.c**: prints multiplication table from 0 to 9
+- **10-add.c**: returns the result of adding two integers
