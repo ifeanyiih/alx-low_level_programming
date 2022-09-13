@@ -2,10 +2,11 @@
 
 /**
 * print_alphabet_x10 - prints lowercase alphabets x10
+*
 * Description: Accepts no argument and prints the lowercase alphabet,
-* from a to z, 10 times
+* from a to z, 10 times.
 */
-void printf_alphabet_x10(void)
+void print_alphabet_x10(void)
 {
 	int count;
 	char letter;
