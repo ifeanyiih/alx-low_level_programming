@@ -32,7 +32,7 @@ int is_prime(unsigned int n)
 {
 	unsigned int i;
 
-	for (i = 2; i < n; i++)
+	for (i = 2; i <= floor(sqrt(n)); i++)
 	{
 		if (n % i == 0)
 			return (0);
