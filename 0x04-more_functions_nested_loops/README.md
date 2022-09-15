@@ -5,4 +5,4 @@ Below is the list of files, and a short description of what the files do.
 ---
 
 - **0-isupper.c**: A functions that checks for uppercase character.
-
+- **1-isdigit.c**: A function that checks if a given argument is a digit (0 to 9)
