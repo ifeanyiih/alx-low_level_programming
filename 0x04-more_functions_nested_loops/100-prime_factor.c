@@ -15,7 +15,7 @@ int main(void)
 	unsigned int max_prime, i;
 
 	num = 612852475143;
-	for (i = floor(sqrt(num)); i < num; ++i)
+	for (i = 3; i < floor(sqrt(num)) ; ++i)
 		if (is_prime(i) && num % i == 0)
 			max_prime = i;
 	printf("%u\n", max_prime);
