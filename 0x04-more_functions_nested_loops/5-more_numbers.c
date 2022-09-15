@@ -16,11 +16,11 @@ void more_numbers(void)
 
 			val = j;
 			if (val < 10)
-				val * 10;
-			_putchar(val / 10 + '0');
+				val*= 10;
 
+			_putchar(val / 10 + '0');
 			if (j >= 10)
-				_putchar(val % 10);
+				_putchar(val % 10 + '0');
 		}
 		_putchar('\n');
 	}
