@@ -12,4 +12,5 @@ Below is the list of files, and a short description of what the files do.
 	- Does not print 2 and 4
 - **5-more_numbers.c**: A function that prints 10 times the numbers from 0 to 14, followed by a new line
 - **6-print_line.c**: A function that draws a straight line in the terminal
+- **7-print_diagonal.c**: A function that draws a diagonal line in the terminal
 
