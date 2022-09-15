@@ -18,9 +18,6 @@ int main(void)
 	for (i = 2; i < floor(sqrt(num)); ++i)
 		if (is_prime(i) && num % i == 0)
 			max_prime = i;
-	for (i = max_prime; i < num / max_prime; ++i)
-		if (is_prime(i) && num % i == 0)
-			max_prime = i;
 	printf("%u\n", max_prime);
 
 	return (0);
