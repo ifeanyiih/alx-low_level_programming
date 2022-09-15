@@ -1,6 +1,4 @@
 #include <stdio.h>
-#define FIZZ Fizz
-#define BUZZ Buzz
 /**
 * main - Entry point for program
 * Return: 0 (Success)
