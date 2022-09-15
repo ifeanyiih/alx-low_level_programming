@@ -15,10 +15,11 @@ int main(void)
 	unsigned int max_prime, i;
 
 	num = 612852475143;
-	for (i = 2; i <= floor(sqrt(num)); ++i)
-		if (is_prime(i))
+	for (i = 2; i < floor(sqrt(num)); ++i)
+		if (is_prime(i) && num % i == 0)
 			max_prime = i;
-	printf("%u", max_prime);
+	printf("%u\n", max_prime);
+
 	return (0);
 }
 
