@@ -2,7 +2,7 @@
 
 /**
 * main - Entry Point
-* Description: A program that prints the first 50 Fibonacci numbers,
+* Description: A program that prints the first 98 Fibonacci numbers,
 * starting with 1 and 2 Followed by a new line
 * Return: 0 (Success)
 */
@@ -14,13 +14,13 @@ int main(void)
 	n2 = 1;
 	sum = n1 + n2;
 
-	for (i = 0; i < 50; ++i)
+	for (i = 0; i < 98; ++i)
 	{
 		sum = n1 + n2;
 		printf("%lu", sum);
 		n1 = n2;
 		n2 = sum;
-		if (i < 50 - 1)
+		if (i < 98 - 1)
 		{
 			putchar(',');
 			putchar(' ');
@@ -29,4 +29,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
