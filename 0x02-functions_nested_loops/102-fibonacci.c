@@ -8,7 +8,7 @@
 */
 int main(void)
 {
-	int n1, n2, sum, i;
+	unsigned long int n1, n2, sum, i;
 
 	n1 = 0;
 	n2 = 1;
@@ -17,9 +17,14 @@ int main(void)
 	for (i = 0; i < 50; ++i)
 	{
 		sum = n1 + n2;
-		printf("%d", sum);
+		printf("%lu", sum);
 		n1 = n2;
 		n2 = sum;
+		if (i < 50 - 1)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
