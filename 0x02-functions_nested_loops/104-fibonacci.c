@@ -17,7 +17,7 @@ int main(void)
 	for (i = 0; i < 98; ++i)
 	{
 		sum = n1 + n2;
-		printf("%lu", sum);
+		printf("%llu", sum);
 		n1 = n2;
 		n2 = sum;
 		if (i < 98 - 1)
