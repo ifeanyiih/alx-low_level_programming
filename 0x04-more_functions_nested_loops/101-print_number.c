@@ -106,4 +106,17 @@ void print_value(int n)
 		_putchar((n / 10) % 10 + '0');
 		_putchar(n % 10 + '0');
 	}
+	else
+	{
+		_putchar(n / 1000000000 + '0');
+		_putchar((n / 100000000) % 10 + '0');
+		_putchar((n / 10000000) % 10 + '0');
+		_putchar((n / 1000000) % 10 + '0');
+		_putchar((n / 100000) % 10 + '0');
+		_putchar((n / 10000) % 10 + '0');
+		_putchar((n / 1000) % 10 + '0');
+		_putchar((n / 100) % 10 + '0');
+		_putchar((n / 10) % 10 + '0');
+		_putchar(n % 10 + '0');
+	}
 }
