@@ -1,6 +1,49 @@
 #include "main.h"
+#include <limits.h>
 
-void print_value(int n);
+/**
+* print - print an integer one character at a time
+* @n: integer argument
+*/
+void print(int n)
+{
+	int digits, m, rev;
+
+	digits = 0;
+	if (n < 0)
+	{
+		_putchar('-');
+		if (n == INT_MIN)
+		{
+			m = n / 1000000000 * -1;
+			n = n % 1000000000;
+			_putchar(m + '0');
+		}
+		n *= -1;
+	}
+	if (n == INT_MAX)
+	{
+		m = n / 1000000000;
+		n = n % 1000000000;
+		_putchar(m + '0');
+	}
+	rev = 0;
+	while (n)
+	{
+		rev = rev * 10 + n % 10;
+		n /= 10;
+		digits++;
+	}
+
+	while (digits--)
+	{
+		_putchar(rev % 10 + '0');
+		rev /= 10;
+	}
+}
+
+
+
 
 /**
 * print_number - prints an integer
@@ -8,102 +51,10 @@ void print_value(int n);
 */
 void print_number(int n)
 {
-	int sign;
-	int val;
-
-	sign = -1;
 	if (n == 0)
-	{
 		_putchar('0');
-	}
-	else if (n < 0)
-	{
-		val = n * sign;
-		_putchar('-');
-		print_value(val);
-	}
 	else
-	{
-		print_value(n);
-	}
+		print(n);
 }
 
-/**
-* print_value - prints integer values for print_number
-* @n: integer argument
-*/
-void print_value(int n)
-{
-	if (n < 10)
-	{
-		_putchar(n + '0');
-	}
-	else if (n < 100)
-	{
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else if (n < 1000)
-	{
-		_putchar(n / 100 + '0');
-		_putchar((n / 10) % 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else if (n < 10000)
-	{
-		_putchar(n / 1000 + '0');
-		_putchar((n / 100) % 10 + '0');
-		_putchar((n / 10) % 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else if (n < 100000)
-	{
-		_putchar(n / 10000 + '0');
-		_putchar((n / 1000) % 10 + '0');
-		_putchar((n / 100) % 10 + '0');
-		_putchar((n / 10) % 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else if (n < 1000000)
-	{
-		_putchar(n / 100000 + '0');
-		_putchar((n / 10000) % 10 + '0');
-		_putchar((n / 1000) % 10 + '0');
-		_putchar((n / 100) % 10 + '0');
-		_putchar((n / 10) % 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else if (n < 10000000)
-	{
-		_putchar(n / 1000000 + '0');
-		_putchar((n / 100000) % 10 + '0');
-		_putchar((n / 10000) % 10 + '0');
-		_putchar((n / 1000) % 10 + '0');
-		_putchar((n / 100) % 10 + '0');
-		_putchar((n / 10) % 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else if (n < 100000000)
-	{
-		_putchar(n / 10000000 + '0');
-		_putchar((n / 1000000) % 10 + '0');
-		_putchar((n / 100000) % 10 + '0');
-		_putchar((n / 10000) % 10 + '0');
-		_putchar((n / 1000) % 10 + '0');
-		_putchar((n / 100) % 10 + '0');
-		_putchar((n / 10) % 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else if (n <= 2147483647)
-	{
-		_putchar(n / 100000000 + '0');
-		_putchar((n / 10000000) % 10 + '0');
-		_putchar((n / 1000000) % 10 + '0');
-		_putchar((n / 100000) % 10 + '0');
-		_putchar((n / 10000) % 10 + '0');
-		_putchar((n / 1000) % 10 + '0');
-		_putchar((n / 100) % 10 + '0');
-		_putchar((n / 10) % 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-}
+

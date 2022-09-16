@@ -16,7 +16,8 @@ int main(void)
 
 	max_prime = 1;
 	num = 612852475143;
-	while (num % 2 == 0 || !is_prime(num))
+	num = 9007199254740991;
+	while (!is_prime(num))
 	{
 		for (i = 3; i <= floor(sqrt(num)); ++i)
 			if (is_prime(i) && num % i == 0)
