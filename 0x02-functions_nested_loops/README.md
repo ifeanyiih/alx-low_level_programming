@@ -19,3 +19,5 @@ This directory contains project based learning files which builds on concepts pr
 - **101-natural.c**: prints the total sum of the multiples of 3 and 5 below 1024
 - **102-fibonacci.c**: print first 50 fibonacci numbers, starting from 1 and 2.
 - **103-fibonacci.c**: By considering the terms in the Fibonacci sequence whose values do not exceed 4,000,000, write a program that finds and prints the sum of the even-valued terms, followed by a new line.
+- **104-fibonacci.c**: Write a program that finds and prints the first 98 Fibonacci numbers, starting with 1 and 2, followed by a new line.
+
