@@ -8,7 +8,7 @@
 */
 int main(void)
 {
-	unsigned long long int n1, n2, sum, i;
+	long double n1, n2, sum, i;
 
 	n1 = 0;
 	n2 = 1;
@@ -17,7 +17,7 @@ int main(void)
 	for (i = 0; i < 98; ++i)
 	{
 		sum = n1 + n2;
-		printf("%llu", sum);
+		printf("%.0Lf", sum);
 		n1 = n2;
 		n2 = sum;
 		if (i < 98 - 1)
