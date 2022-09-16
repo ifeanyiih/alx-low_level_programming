@@ -14,11 +14,21 @@ int main(void)
 	unsigned long int num;
 	unsigned int max_prime, i;
 
+	max_prime = -1;
 	num = 612852475143;
-	for (i = 3; i < floor(sqrt(num)) ; ++i)
-		if (is_prime(i) && num % i == 0)
-			max_prime = i;
-	printf("%u\n", max_prime);
+	while (num % 2 == 0 || !is_prime(num))
+	{
+		for (i = 3; i <= floor(sqrt(num)); ++i)
+			if (is_prime(i) && num % i == 0)
+				max_prime = i;
+		num = num / max_prime;
+		if (is_prime(num))
+			max_prime = num;
+	}
+	if (max_prime == -1)
+		printf("%lu\n", num);
+	else
+		printf("%u\n", max_prime);
 
 	return (0);
 }
