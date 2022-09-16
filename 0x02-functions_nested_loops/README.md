@@ -17,4 +17,5 @@ This directory contains project based learning files which builds on concepts pr
 - **11-print_to_98.c**: prints digits from n to 98.
 - **100-times_table.c**: prints times table for a given integer length.
 - **101-natural.c**: prints the total sum of the multiples of 3 and 5 below 1024
+- **102-fibonacci.c**: print first 50 fibonacci numbers, starting from 1 and 2.
 
