@@ -14,7 +14,7 @@ int main(void)
 	unsigned long int num;
 	unsigned int max_prime, i;
 
-	max_prime = -1;
+	max_prime = 1;
 	num = 612852475143;
 	while (num % 2 == 0 || !is_prime(num))
 	{
@@ -25,7 +25,7 @@ int main(void)
 		if (is_prime(num))
 			max_prime = num;
 	}
-	if (max_prime == -1)
+	if (max_prime == 1)
 		printf("%lu\n", num);
 	else
 		printf("%u\n", max_prime);
