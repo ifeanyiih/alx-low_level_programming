@@ -16,13 +16,13 @@ int main(void)
 	n2 = 1;
 	sum = n1 + n2;
 	sum_of_evens = 0;
-	for (i = 0; i < 4000000; ++i)
+	for (i = 0; i < 50; ++i)
 	{
 		sum = n1 + n2;
 		n1 = n2;
 		n2 = sum;
 
-		if (sum % 2 == 0)
+		if (sum % 2 == 0 && sum < 4000000)
 			sum_of_evens += sum;
 	}
 	printf("%lu\n", sum_of_evens);
