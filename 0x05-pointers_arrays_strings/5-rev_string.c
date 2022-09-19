@@ -16,7 +16,7 @@ void rev_string(char *s)
 	while (*(s + i))
 		++i;
 
-	limit = (i + j) / 2;
+	limit = ((i - 1) + j) / 2;
 	while (j < limit && --i > limit)
 	{
 		char tmp;
