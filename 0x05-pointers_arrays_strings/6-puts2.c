@@ -14,7 +14,7 @@ void puts2(char *str)
 	unsigned int i;
 
 	i = 0;
-	while (*(str + i))
+	while (*(str + i) && *(str + i) < '\0')
 	{
 		_putchar(*(str + i));
 		i += 2;
