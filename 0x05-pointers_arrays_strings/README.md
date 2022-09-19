@@ -8,3 +8,4 @@ Below is a list of files in this directory
 - **2-strlen.c**: A function that returns the length of a string
 - **3-puts.c**: A function that prints a string followed by a new line to stdout
 - **4-print_rev.c**: A function that prints a string in reverse
+- **5-rev_string.c**: A function that reverses a string
