@@ -8,24 +8,24 @@
 */
 int main(void)
 {
-	long double n1, n2, sum, i;
+	unsigned long int n1, n2, sum, i;
 
 	n1 = 0;
 	n2 = 1;
 	sum = n1 + n2;
-
-	for (i = 0; i < 98; ++i)
+	for (i = 0; i < 95; ++i)
 	{
 		sum = n1 + n2;
-		printf("%.0Lf", sum);
+		printf("%lu",sum);
 		n1 = n2;
 		n2 = sum;
-		if (i < 98 - 1)
+		/*if (i < 98 - 1)
 		{
 			putchar(',');
 			putchar(' ');
-		}
+		}*/
 	}
+
 	putchar('\n');
 	return (0);
 }
