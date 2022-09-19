@@ -10,3 +10,4 @@ Below is a list of files in this directory
 - **4-print_rev.c**: A function that prints a string in reverse
 - **5-rev_string.c**: A function that reverses a string
 - **6-puts2.c**: A function that prints every other character of a string, starting with the first
+- **7-puts_half.c**: A function that prints half of a string, followed by a new line
