@@ -7,3 +7,4 @@ Below is a list of files in this directory
 - **1-swap.c**: A function that swaps the values of two integers
 - **2-strlen.c**: A function that returns the length of a string
 - **3-puts.c**: A function that prints a string followed by a new line to stdout
+- **4-print_rev.c**: A function that prints a string in reverse
