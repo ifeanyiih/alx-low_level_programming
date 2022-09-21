@@ -7,3 +7,5 @@ Below is a list of files in this directory, with a brief description.
 - **0-strcat.c**: A function that concatenates two strings
 - **1-strncat.c**: A function that concatenates two strings, using at most n bytes
 - **2-strncpy.c**: A function that copies a string
+- **3-strcmp.c**: A function that compares two strings
+
