@@ -9,3 +9,4 @@ Below is a list of project directories in this repo
 - **0x03-debugging**
 - **0x04-more_functions_nested_loops**
 - **0x05-pointers_arrays_strings**
+- **0x06-pointers_arrays_strings**
