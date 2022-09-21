@@ -14,3 +14,4 @@ Below is a list of files in this directory
 - **8-print_array.c**: A function that prints n elements of an array of integers, followed by a new line
 - **9-strcpy.c**: A function that copies a from one array to another
 - **100-atoi.c**: A function that converts a string to integers.
+- **101-keygen.c**: A program that generates random valid passwords for the program `101-crackme`
