@@ -12,3 +12,4 @@ Below is a list of files in this directory, with a brief description.
 - **5-string_toupper.c**: A function that changes all lowercase letters of a string to uppercase
 - **6-cap_string.c**: A function that capitalizes all the words in a string.
 - **7-leet.c**: A function that encodes a string into 1337.
+- **101-print_number.c**: function prints an integer.
