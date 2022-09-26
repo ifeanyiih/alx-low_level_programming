@@ -7,4 +7,5 @@ Below are a list of files in this directory
 - **1-memcpy.c**: A function that copies memory area.
 - **2-strchr.c**: A function that locates a character in a string.
 - **3-strspn.c**: gets the length of a prefix substring
+- **4-strpbrk.c**: A function that searches a string for any of a set of bytes
 
