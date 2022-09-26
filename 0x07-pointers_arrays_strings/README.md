@@ -11,4 +11,4 @@ Below are a list of files in this directory
 - **5-strstr.c**: A function that locates a substring
 - **7-print_chessboard.c**: A function that prints the chessboard
 - **8-print_diagsums.c**; prints the sum of the two diagonals of a square matrix of integers
-
+- **100-set_string.c**: A function that sets the value of a pointer to a char.
