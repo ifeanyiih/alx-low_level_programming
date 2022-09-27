@@ -26,7 +26,7 @@ char *rot13(char *s)
 	while (*(s + i))
 	{
 		j = 0;
-		while ( j < 52)
+		while (j < 52)
 		{
 			if (*(s + i) == alpha[j])
 			{
