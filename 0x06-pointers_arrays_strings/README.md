@@ -15,3 +15,4 @@ Below is a list of files in this directory, with a brief description.
 - **100-rot13.c**: A function that encodes string using rot13
 - **101-print_number.c**: function prints an integer.
 - **102-magic.c**: 
+- **104-print_buffer.c**: A function that prints a buffer
