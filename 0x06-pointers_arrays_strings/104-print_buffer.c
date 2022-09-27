@@ -2,12 +2,27 @@
 #include <ctype.h>
 #include "main.h"
 
+void buffer(char *b, int size);
+
 /**
 * print_buffer - prints a buffer
 * @b: the string buffer
 * @size: integer argument
 */
 void print_buffer(char *b, int size)
+{
+	if (size <= 0)
+		putchar('\n');
+	else
+		buffer(b, size);
+}
+
+/**
+* buffer - The buffer to print
+* @b: the string
+* @size: size of the buffer
+*/
+void buffer(char *b, int size)
 {
 	int i, j, count;
 
@@ -49,4 +64,5 @@ void print_buffer(char *b, int size)
 		putchar('\n');
 		i += 10;
 	}
+
 }
