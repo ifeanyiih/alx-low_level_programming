@@ -2,7 +2,9 @@
 
 /**
 * main - Entry Point
-* Description: A program that prints the largest prime factor of a given number
+* Description: A program that prints the largest
+* prime factor of a given number
+* Return: 0 (Success)
 */
 int main(void)
 {
