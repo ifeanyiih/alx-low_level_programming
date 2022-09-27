@@ -11,7 +11,6 @@ int main(void)
 	unsigned long int primef, i;
 
 	primef = 612852475143;
-	primef = 9007199254740991;
 	for (i = 2; i < primef; ++i)
 		if (primef % i == 0)
 			primef /= i;
