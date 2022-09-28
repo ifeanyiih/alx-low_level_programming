@@ -28,7 +28,7 @@ int _sqrt_recursion(int n)
 * @count: number of times recursion ran
 * Return: n count times
 */
-int test(int n, count)
+int test(int n, int count)
 {
 	if (n == 0)
 		return (count);
