@@ -1,6 +1,6 @@
 #include "main.h"
 
-int prime_test(x, y);
+int prime_test(int x, int y);
 
 /**
 * is_prime_number - tests if a number is a prime number
@@ -18,7 +18,7 @@ int is_prime_number(int n)
 * @y: number / 2
 * Return: 1 for pass, 0 otherwise
 */
-int prime_test(x, y)
+int prime_test(int x, int y)
 {
 	if (y == 0)
 		return (1);

@@ -9,24 +9,5 @@
 */
 int _sqrt_recursion(int n)
 {
-	int count, i, tmp;
-
-	i = 1;
-	count = 0;
-	tmp = n;
-	while (1)
-	{
-		if (tmp > 0)
-		{
-			tmp -= i;
-			count += 1;
-			i += 2;
-		}
-		else
-			break;
-	}
-	if (count * count == n)
-		return (count);
-	else
-		return (-1);
+	
 }
