@@ -1,6 +1,6 @@
 #include "main.h"
 
-int test(int, int);
+int test(int, int, int);
 
 /**
 * _sqrt_recursion - returns the natural square root of a
@@ -15,10 +15,13 @@ int _sqrt_recursion(int n)
 
 	if (n <= 0)
 		return (-1);
-	count = test(n - 1, 1);
+	if (n == 1)
+		return (1);
+	count = test(n - 1, 1, 1);
 	if (count * count == n)
 		return (count);
-	return (-1);
+	else
+		return (-1);
 }
 
 
@@ -26,13 +29,14 @@ int _sqrt_recursion(int n)
 * test - _sqrt_helper
 * @n: integer argument
 * @count: number of times recursion ran
+* @sub: odd number to subtract
 * Return: n count times
 */
-int test(int n, int count)
+int test(int n, int count, int sub)
 {
 	if (n == 0)
 		return (count);
 	if (n < 0)
 		return (-1);
-	return (test(n - 2, count + 1));
+	return (test(n - (sub + 2), count + 1, sub + 2));
 }
