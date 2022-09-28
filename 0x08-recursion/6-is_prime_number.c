@@ -20,6 +20,8 @@ int is_prime_number(int n)
 */
 int prime_test(int x, int y)
 {
+	if (x == 1)
+		return (0);
 	if (y == 0)
 		return (1);
 	if (x % y == 0)
