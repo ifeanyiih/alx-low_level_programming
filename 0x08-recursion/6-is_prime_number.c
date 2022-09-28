@@ -24,6 +24,8 @@ int prime_test(int x, int y)
 		return (0);
 	if (y == 0)
 		return (1);
+	if (y == 1)
+		return (1);
 	if (x % y == 0)
 		return (0);
 	return (prime_test(x, y - 1));
