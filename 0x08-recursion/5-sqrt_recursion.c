@@ -11,6 +11,8 @@ int test(int, int);
 */
 int _sqrt_recursion(int n)
 {
+	int count;
+
 	if (n <= 0)
 		return (-1);
 	count = test(n - 1, 1);
