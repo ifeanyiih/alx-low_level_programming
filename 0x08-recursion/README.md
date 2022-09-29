@@ -11,4 +11,5 @@ Below is a list of files in this directory and a brief description.
 - **5-sqrt_recursion.c**: a function that returns the natural square root of a number
 - **6-is_prime_number.c**: a function that checks if a number is a prime number
 - **100-is_palindrome.c**: checks if a string is palindrome or not
+- **101-wildcmp.c**: A function that compares two strings and returns 1 if the strings can be considered identical otherwise return 0
 
