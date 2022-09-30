@@ -3,22 +3,15 @@
 #define Unused(x) (void)(x)
 
 /**
-* main - prints the name of this program file
+* main - program prints number of arguments passed
 * @argc: argument count
 * @argv: argument vector
 * Return: (0) success
 */
 int main(int argc, char *argv[])
 {
-	int i;
-
-	i = 0;
-	while (*(*argv + i))
-	{
-		_putchar(*(*argv + i));
-		++i;
-	}
+	_putchar(--argc + '0');
 	_putchar('\n');
-	Unused(argc);
+	Unused(argv);
 	return (0);
 }
