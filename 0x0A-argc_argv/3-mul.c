@@ -44,5 +44,5 @@ int main(int argc, char *argv[])
 		++i;
 	}
 	printf("%d\n", d1 * d2);
-
+	return (0);
 }
