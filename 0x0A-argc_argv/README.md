@@ -1,0 +1,7 @@
+# 0x0A-argc_argv
+A project based learning directory that contains files relevant to this project. The files are solutions to the tasks.
+Below is a list of the files and a brief description
+
+---
+- **0-whatsmyname.c**: a program that prints its name, followed by a new line.
+

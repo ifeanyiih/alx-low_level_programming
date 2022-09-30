@@ -12,3 +12,5 @@ Below is a list of project directories in this repo
 - **0x06-pointers_arrays_strings**
 - **0x07-pointers_arrays_strings**
 - **0x08-recursion**
+- **0x0A-argc_argv**
+
