@@ -5,3 +5,4 @@ Below is a list of files in this directory
 ---
 - **libmy.a**: a static library
 - **main.h**: contain function prototypes
+- **create_static_lib.sh**: creates a static library
