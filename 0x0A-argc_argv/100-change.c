@@ -18,12 +18,13 @@ int main(int argc, char *argv[])
 	int num, coins;
 
 	coins = 0;
-	num = atoi(argv[1]);
-	if (argc > 2)
+	if (argc != 2)
 	{
 		printf("%s\n", "Error");
 		return (1);
 	}
+
+	num = atoi(argv[1]);
 
 	if (num < 0)
 	{
