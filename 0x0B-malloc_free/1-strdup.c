@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
 * _strdup - return a pointer to a string duplicate
@@ -15,9 +16,12 @@ char *_strdup(char *str)
 	i = 0;
 	while (*(str + i))
 		++i;
-	p = malloc(sizeof(char) * i);
+	p = malloc(sizeof(char) * ++i);
 	if (p == NULL)
+	{
+		printf("%s\n", "failed to allocate memory");
 		return (NULL);
+	}
 	if (str == NULL)
 		return (NULL);
 	i = 0;
