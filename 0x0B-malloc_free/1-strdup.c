@@ -14,15 +14,12 @@ char *_strdup(char *str)
 	char *p;
 
 	i = 0;
+	if (str == NULL)
+		return (NULL);
 	while (*(str + i))
 		++i;
 	p = malloc(sizeof(char) * ++i);
 	if (p == NULL)
-	{
-		printf("%s\n", "failed to allocate memory");
-		return (NULL);
-	}
-	if (str == NULL)
 		return (NULL);
 	i = 0;
 	while ((*(p + i) = *(str + i)) != '\0')
