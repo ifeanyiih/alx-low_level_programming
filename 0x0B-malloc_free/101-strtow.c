@@ -42,8 +42,8 @@ char **strtow(char *str)
 				arr[j] = malloc(sizeof(char) * (wc + 1));
 				if (!arr[j])
 				{
-					while (j--)
-						free(arr[j]);
+					while (j)
+						free(arr[j--]);
 					free(arr);
 					return (NULL);
 				}
@@ -52,6 +52,18 @@ char **strtow(char *str)
 			wc = 0;
 		}
 		++i;
+	}
+	if (wc > 0)
+	{
+		arr[j] = malloc(sizeof(char) * (wc + 1));
+		if (!arr[j])
+		{
+			while (j--)
+				free(arr[j]);
+			free(arr);
+			return (NULL);
+		}
+		++j;
 	}
 	arr[j] = NULL;
 
@@ -75,7 +87,6 @@ char **strtow(char *str)
 		}
 		++i;
 	}
-
 	return (arr);
 }
 
