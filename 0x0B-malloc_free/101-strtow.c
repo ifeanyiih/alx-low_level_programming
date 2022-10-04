@@ -18,6 +18,8 @@ char **strtow(char *str)
 	int size, i, j, wc;
 	char **arr;
 
+	if (str == NULL || str == "")
+		return (NULL);
 	size = words_length(str);
 
 	arr = (char **) malloc(sizeof(char *) * size);
