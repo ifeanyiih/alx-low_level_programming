@@ -24,7 +24,7 @@ char **strtow(char *str)
 	if (!size)
 		return (NULL);
 
-	arr = (char **) malloc(sizeof(char *) * size);
+	arr = (char **) malloc(sizeof(char *) * (size + 1));
 	if (!arr)
 		return (NULL);
 
@@ -39,7 +39,7 @@ char **strtow(char *str)
 		{
 			if (wc > 0)
 			{
-				arr[j] = malloc(sizeof(char) * wc);
+				arr[j] = malloc(sizeof(char) * (wc + 1));
 				if (!arr[j])
 				{
 					while (j--)
