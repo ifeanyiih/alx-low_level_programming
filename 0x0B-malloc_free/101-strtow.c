@@ -21,6 +21,8 @@ char **strtow(char *str)
 	if (!str || !*(str))
 		return (NULL);
 	size = words_length(str);
+	if (!size)
+		return (NULL);
 
 	arr = (char **) malloc(sizeof(char *) * size);
 	if (!arr)
