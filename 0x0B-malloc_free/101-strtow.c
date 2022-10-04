@@ -18,7 +18,7 @@ char **strtow(char *str)
 	int size, i, j, wc;
 	char **arr;
 
-	if (str == NULL || str == "")
+	if (!str || !*(str))
 		return (NULL);
 	size = words_length(str);
 
