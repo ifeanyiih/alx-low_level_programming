@@ -1,0 +1,8 @@
+Pseudocode for 101-strtow.c
+
+Loop throught the given string to count the number of words
+	allocate the memory for array of words
+Loop through the string, count the number of characters for each string
+	allocate memory for the string
+Loop through the string
+	copy the words to allocated memory
