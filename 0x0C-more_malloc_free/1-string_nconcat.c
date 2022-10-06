@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
 
 unsigned int len(char *);
@@ -20,11 +21,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (!s1)
 		s1 = "";
 	if (n >= len(s2))
-		n = len(s2) + 1;
-	else
-		n += 1;
+		n = len(s2);
 
-	p = malloc(sizeof(char) * (len(s1) + n));
+	p = malloc(sizeof(char) * (len(s1) + n + 1));
 	if (!p)
 		return (NULL);
 
@@ -36,7 +35,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		++i, ++j, --n;
 	}
-	*(p + i) = '\0';
+	if (*(p + i) == '\0')
+		printf("%s\n", "null char");;
 	return (p);
 }
 
@@ -53,5 +53,6 @@ unsigned int len(char *s)
 	i = 0;
 	while (*(s + i))
 		++i;
+	printf("lent of %s: %d\n", s, i);
 	return (i);
 }
