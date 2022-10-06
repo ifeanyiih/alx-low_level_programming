@@ -14,6 +14,8 @@ int *array_range(int min, int max)
 {
 	int *arr, size, i;
 
+	if (min == max)
+		exit(98);
 	if (min > max)
 		size = min - max + 1;
 	else
