@@ -21,27 +21,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (!s1)
 		s1 = "";
 
-	if (n >= len(s2))
-	{
-		p = malloc(sizeof(char) * (len(s1) + len(s2) + 1));
-		n = len(s2);
-	}
-	else
-		p = malloc(sizeof(char) * (len(s1) + n + 1));
+	p = malloc(sizeof(char) * (len(s1) + n + 1));
 	if (!p)
 		return (NULL);
 
 	i = 0;
 	while ((*(p + i) = *(s1 + i)) != '\0')
 		++i;
+	printf("i = %d\n", i);
 	j = 0;
-	while (n--)
+	while (n > 0 && (*(p + i) = *(s2 + j)))
 	{
-		*(p + i) = *(s2 + j);
-		++i;
-		++j;
+		++i, ++j, --n;
 	}
-
 	return (p);
 }
 
