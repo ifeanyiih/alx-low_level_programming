@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "main.h"
+#include <stdio.h>
 
 unsigned int len(char *);
 
@@ -17,6 +18,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (!s2)
 		s2 = "";
+	if (!s1)
+		s1 = "";
 
 	if (n >= len(s2))
 	{
@@ -55,5 +58,6 @@ unsigned int len(char *s)
 	i = 0;
 	while (*(s + i))
 		++i;
+	printf("len of %s = %d\n", s, i);
 	return (i);
 }
