@@ -20,20 +20,16 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (ptr && new_size <= 0)
 	{
 		free(ptr);
-		return (NULL);
+		exit(EXIT_SUCCESS);
 	}
 	if (ptr == NULL && new_size)
-	{
 		p = malloc(new_size);
-		if (!p)
-			return (NULL);
-		return (p);
-	}
 	else
 		p = malloc(new_size);
 	if (!p)
-		return (NULL);
+		exit(EXIT_FAILURE);
 	free(ptr);
-	return (memcpy(p, ptr, old_size));
+	memcpy(p, ptr, old_size);
+	return (p);
 }
 
