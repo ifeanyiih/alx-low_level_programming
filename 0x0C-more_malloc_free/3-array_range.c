@@ -16,7 +16,10 @@ int *array_range(int min, int max)
 	if (min == max)
 		size = 1;
 	if (min > max)
-		size = min - max + 1;
+	{
+		printf("%s\n", "Failed");
+		exit(98);
+	}
 	else
 		size = max - min + 1;
 	arr = malloc(sizeof(int) * size);
