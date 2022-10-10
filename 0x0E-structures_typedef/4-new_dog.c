@@ -21,10 +21,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		exit(98);
 	i = 0;
 	while ((*(dog->name + i) = *(name + i)) != '\0')
-		;
+		++i;
 	i = 0;
 	while ((*((*dog).owner + i) = *(owner + i)) != '\0')
-		;
+		++i;
 	dog->age = age;
 	return (dog);
 }
