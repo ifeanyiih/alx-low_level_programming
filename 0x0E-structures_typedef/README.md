@@ -1,0 +1,7 @@
+# 0x0E-structures_typedef
+This directory contains project based learning files.
+The concepts encountered in files, builds up on previous concepts learned
+Below is a list of files in this directory
+---
+- **dog.h**: defines a new type `struct dog`
+
