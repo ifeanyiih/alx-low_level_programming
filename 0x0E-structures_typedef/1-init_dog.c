@@ -26,6 +26,16 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 		}
 		++i;
 	}
+	i = 0;
+	while (*(owner + i))
+	{
+		if (!isalpha(*(owner + i)))
+		{
+			printf("%s\n", "Error");
+			exit(98);
+		}
+		++i;
+	}
 	d->name = name;
 	d->age = age;
 	d->owner = owner;
