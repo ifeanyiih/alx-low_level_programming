@@ -4,4 +4,5 @@ This project builds upon previously learned concepts
 Below is a list of files in this directory
 
 ---
-- **0-object_like_macro.h**: create a header file that defines a macro named SIZE
+- **0-object_like_macro.h**: create a header file that defines a macro named `SIZE`
+- **1-pi.h**: creates a header file that defines a macro named `PI`
