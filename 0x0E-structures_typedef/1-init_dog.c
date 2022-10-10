@@ -1,6 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
 #include <ctype.h>
+#include <stdio.h>
 
 /**
 * init_dog - initializes a dog object
@@ -11,8 +12,20 @@
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	unsigned int i;
+
 	if (!d)
 		exit(98);
+	i = 0;
+	while (*(name + i))
+	{
+		if (!isalpha(*(name + i)))
+		{
+			printf("%s\n", "Error");
+			exit(98);
+		}
+		++i;
+	}
 	d->name = name;
 	d->age = age;
 	d->owner = owner;
