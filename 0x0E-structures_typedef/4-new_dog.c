@@ -15,15 +15,22 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
+	char *name_cpy, *owner_cpy;
+	unsigned int i;
 
 	dog = malloc(sizeof(dog_t));
 	if (!dog)
-	{
-		printf("%s\n", "Error");
 		exit(98);
-	}
-	dog->name = name;
+	i = 0;
+	name_cpy = NULL;
+	while ((*(name_cpy + i) = *(name + i)) != '\0')
+		;
+	i = 0;
+	owner_cpy = NULL;
+	while ((*(owner_cpy + i) = *(owner + i)) != '\0')
+		;
+	dog->name = name_cpy;
 	dog->age = age;
-	(*dog).owner = owner;
+	(*dog).owner = owner_cpy;
 	return (dog);
 }
