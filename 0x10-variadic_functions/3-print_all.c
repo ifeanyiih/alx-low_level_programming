@@ -11,7 +11,7 @@
 void print_all(const char * const format, ...)
 {
 	int i;
-	char *separator;
+	char *separator, *s;
 	va_list ap;
 
 	va_start(ap, format);
@@ -31,7 +31,8 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(ap, double));
 				break;
 			case 's':
-				printf("%s", va_arg(ap, char *));
+				s = va_arg(ap, char *);
+				printf("%s", (s == NULL) ? "(nil)" : s);
 				break;
 		}
 		if (!(format[i + 1] == '\0') &&
