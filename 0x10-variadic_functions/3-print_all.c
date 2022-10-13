@@ -14,39 +14,36 @@ void print_all(const char * const format, ...)
 	char *separator, *s;
 	va_list ap;
 
-	if (!(format == NULL))
+	va_start(ap, format);
+	separator = ", ";
+	i = 0;
+	while (*(format + i) && (format != NULL))
 	{
-		va_start(ap, format);
-		separator = ", ";
-		i = 0;
-		while (*(format + i))
+		switch (format[i])
 		{
-			switch (format[i])
-			{
-				case 'c':
-					printf("%c", va_arg(ap, int));
+			case 'c':
+				printf("%c", va_arg(ap, int));
 				break;
-				case 'i':
-					printf("%d", va_arg(ap, int));
+			case 'i':
+				printf("%d", va_arg(ap, int));
 				break;
-				case 'f':
-					printf("%f", va_arg(ap, double));
+			case 'f':
+				printf("%f", va_arg(ap, double));
 				break;
-				case 's':
-					s = va_arg(ap, char *);
-					printf("%s", (s == NULL) ? "(nil)" : s);
+			case 's':
+				s = va_arg(ap, char *);
+				printf("%s", (s == NULL) ? "(nil)" : s);
 				break;
-			}
-			if (!(format[i + 1] == '\0') &&
-			(format[i] == 'c' || format[i] == 'i' ||
-			format[i] == 'f' || format[i] == 's'))
-				printf("%s", separator);
-			if (format[i + 1] == '\0')
-			{
-				printf("%c", '\n');
-				va_end(ap);
-			}
-			++i;
 		}
+		if (!(format[i + 1] == '\0') &&
+		(format[i] == 'c' || format[i] == 'i' ||
+		 format[i] == 'f' || format[i] == 's'))
+			printf("%s", separator);
+		if (format[i + 1] == '\0')
+		{
+			printf("%c", '\n');
+			va_end(ap);
+		}
+		++i;
 	}
 }
