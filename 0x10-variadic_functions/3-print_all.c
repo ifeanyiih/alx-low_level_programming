@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
 			}
 			if (!(format[i + 1] == '\0') &&
 			(format[i] == 'c' || format[i] == 'i' ||
-		 	format[i] == 'f' || format[i] == 's'))
+			format[i] == 'f' || format[i] == 's'))
 				printf("%s", separator);
 			if (format[i + 1] == '\0')
 			{
