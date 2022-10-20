@@ -28,7 +28,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	else
 	{
 		copy = *head;
-		while((copy)->next != NULL)
+		while ((copy)->next != NULL)
 		{
 			copy = (copy)->next;
 		}
