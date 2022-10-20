@@ -28,6 +28,8 @@ size_t next(list_t *n)
 {
 	size_t i;
 
+	if (n == NULL)
+		return (0);
 	i = 1;
 	printf("[%d] %s\n", n->len, (n->str == NULL) ? "(nil)" : n->str);
 	while (n->next != NULL)
