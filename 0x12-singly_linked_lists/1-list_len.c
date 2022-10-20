@@ -26,7 +26,7 @@ size_t next(list_t *n)
 	if (n == NULL)
 		return (0);
 	i = 1;
-	while(n->next != NULL)
+	while (n->next != NULL)
 	{
 		++i;
 		n = n->next;
