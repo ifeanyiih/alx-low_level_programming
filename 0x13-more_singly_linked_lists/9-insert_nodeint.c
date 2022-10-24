@@ -21,12 +21,20 @@ listint_t
 	node->n = n;
 	index = 0;
 	copy = *head;
-	while ((index < idx - 1) && copy != NULL)
+	if (idx == 0)
 	{
-		copy = copy->next;
-		++index;
+		node->next = *head;
+		*head = node;
 	}
-	node->next = copy->next;
-	copy->next = node;
+	else
+	{
+		while ((index < idx - 1) && copy != NULL)
+		{
+			copy = copy->next;
+			++index;
+		}
+		node->next = copy->next;
+		copy->next = node;
+	}
 	return (node);
 }
