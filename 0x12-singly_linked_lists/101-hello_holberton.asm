@@ -13,7 +13,7 @@
                                                            ;Linker resolves this symbol later.
 
 segment .data                                       ;section for initialized data
-	string db 'Hello, Holberton', 10, 0Ah, 0h           ;message string with new-line char (10 decimal) and the NULL terminator
+	string db 'Hello, Holberton', 0Ah, 0h           ;message string with new-line char (10 decimal) and the NULL terminator
                                                     ;string now refers to the starting address at which 'Hello, World' is stored.
 
 segment .text
