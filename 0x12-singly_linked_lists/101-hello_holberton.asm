@@ -22,4 +22,3 @@ main:
         call    printf                              ;calls printf
         add     esp, 4                              ;advances stack-pointer by 4 flushing out the pushed string argument
         ret                                         ;return
-
