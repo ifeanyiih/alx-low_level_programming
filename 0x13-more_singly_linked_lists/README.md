@@ -8,3 +8,5 @@ Below is a list of files in this directory
 - **2-add_nodeint.c**: a function that adds a new node at the beginning of a `listint_t` list
 - **3-add_nodeint_end.c**: a funciton that adds a new node at the end of a `listint_t` list
 - **4-free_listint.c**: a function that frees a `listint_t` list
+- **5-free_listint2.c**: a function that frees a `listint_t` list
+- **6-pop_listint.c**: a function that deletes the head node of a `listint_t` list, and returns the data
