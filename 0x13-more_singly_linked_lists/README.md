@@ -10,3 +10,4 @@ Below is a list of files in this directory
 - **4-free_listint.c**: a function that frees a `listint_t` list
 - **5-free_listint2.c**: a function that frees a `listint_t` list
 - **6-pop_listint.c**: a function that deletes the head node of a `listint_t` list, and returns the data
+- **7-get_nodeint.c**: a function that returns the nth node of a `listint_t` linked list.
