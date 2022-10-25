@@ -13,6 +13,8 @@ listint_t
 	listint_t *copy, *node;
 	unsigned int index;
 
+	if (head == NULL)
+		return (NULL);
 	if (*head == NULL)
 		return (NULL);
 	node = malloc(sizeof(listint_t));
