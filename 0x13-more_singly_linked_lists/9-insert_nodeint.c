@@ -33,8 +33,13 @@ listint_t
 			copy = copy->next;
 			++index;
 		}
-		node->next = copy->next;
-		copy->next = node;
+		if (copy)
+		{
+			node->next = copy->next;
+			copy->next = node;
+		}
+		else
+			return (NULL);
 	}
 	return (node);
 }
