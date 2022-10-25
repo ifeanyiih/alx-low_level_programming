@@ -39,7 +39,10 @@ listint_t
 			copy->next = node;
 		}
 		else
+		{
+			free(node);
 			return (NULL);
+		}
 	}
 	return (node);
 }
