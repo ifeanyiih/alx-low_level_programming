@@ -11,8 +11,6 @@ void free_listint2(listint_t **head)
 	if (*head != NULL)
 	{
 		copy = *head;
-		*head = NULL;
-		copy = copy->next;
 		while (copy != NULL)
 		{
 			node = copy;
