@@ -15,8 +15,6 @@ listint_t
 
 	if (head == NULL)
 		return (NULL);
-	if (*head == NULL)
-		return (NULL);
 	node = malloc(sizeof(listint_t));
 	if (node == NULL)
 		return (NULL);
