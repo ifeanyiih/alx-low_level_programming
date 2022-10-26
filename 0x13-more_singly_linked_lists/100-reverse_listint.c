@@ -13,6 +13,8 @@ listint_t *reverse_listint(listint_t **head)
 		return (NULL);
 	if (*head == NULL)
 		return (NULL);
+	if ((*head)->next == NULL)
+		return (*head);
 	copy = *head;
 	*head = (*head)->next;
 	copy->next = NULL;
