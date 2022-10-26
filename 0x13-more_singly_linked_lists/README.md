@@ -14,3 +14,4 @@ Below is a list of files in this directory
 - **8-sum_listint.c**: a function that returns the sum of all the data (n) of a `listint_t` linked list.
 - **9-insert_nodeint.c**: a function that inserts a new node at a given position
 - **10-delete_nodeint.c**: a function that deletes a node at index `index` of a `listint_t` linked list
+- **100-reverse_listint.c**: a function that reverse a `listint_t` list.
