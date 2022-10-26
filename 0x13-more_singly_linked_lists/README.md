@@ -16,3 +16,4 @@ Below is a list of files in this directory
 - **10-delete_nodeint.c**: a function that deletes a node at index `index` of a `listint_t` linked list
 - **100-reverse_listint.c**: a function that reverse a `listint_t` list.
 - **101-print_listint_safe.c**: a function that prints a `listint_t` linked list
+- **102-free_listint_safe.c**: a function that frees a `listint_t` list
