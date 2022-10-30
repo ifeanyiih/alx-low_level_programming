@@ -11,7 +11,7 @@ listint_t *start_loop(listint_t *p, listint_t *head);
 size_t print_listint_safe(const listint_t *head)
 {
 	listint_t *cpy, *sl;
-	int nn;
+	size_t nn;
 
 	if (head == NULL)
 		return (0);
@@ -22,7 +22,11 @@ size_t print_listint_safe(const listint_t *head)
 	if (head->next == head)
 		return (nn);
 	if (cpy->next == head)
+	{
+		++n;
+		printf("[%p] %d\n", (void *)cpy, cpy->n);
 		return (nn);
+	}
 	if (sl)
 	{
 		sl = start_loop(sl, cpy);
