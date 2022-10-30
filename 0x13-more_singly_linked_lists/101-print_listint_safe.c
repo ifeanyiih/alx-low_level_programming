@@ -11,14 +11,16 @@ listint_t *start_loop(listint_t *p, listint_t *head);
 size_t print_listint_safe(const listint_t *head)
 {
 	listint_t *cpy, *sl;
-	size_t nn;
+	int nn;
 
 	if (head == NULL)
 		return (0);
 	cpy = head->next;
-	nn = 0;
+	nn = 1;
 	sl = check_loop(cpy);
 	printf("[%p] %d\n", (void *)head, head->n);
+	if (cpy->next == head)
+		return (nn);
 	if (sl)
 	{
 		sl = start_loop(sl, cpy);
