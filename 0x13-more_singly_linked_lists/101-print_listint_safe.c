@@ -23,7 +23,7 @@ size_t print_listint_safe(const listint_t *head)
 		return (nn);
 	if (cpy->next == head)
 	{
-		++n;
+		++nn;
 		printf("[%p] %d\n", (void *)cpy, cpy->n);
 		return (nn);
 	}
