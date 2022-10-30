@@ -19,6 +19,8 @@ size_t print_listint_safe(const listint_t *head)
 	nn = 1;
 	sl = check_loop(cpy);
 	printf("[%p] %d\n", (void *)head, head->n);
+	if (head->next == head)
+		return (nn);
 	if (cpy->next == head)
 		return (nn);
 	if (sl)
