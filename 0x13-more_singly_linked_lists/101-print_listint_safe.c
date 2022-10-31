@@ -26,7 +26,8 @@ size_t print_listint_safe(const listint_t *head)
 	if (node->next == head)
 	{
 		++nn;
-		printf("[%p] %d\n", (void *)node, node->n);
+		printf("[%p] %d\n-> [%p] %d\n", (void *)node, node->n,
+				(void *)node->next, node->next->n);
 		return (nn);
 	}
 	sl = check_loop(node);
