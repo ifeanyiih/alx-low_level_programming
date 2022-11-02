@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 			err(f2, 'w', argv[2]);
 	}
 
-	while ((n = read(f1, buf, BUFSIZE)) > 0)
+	while (((n = read(f1, buf, BUFSIZE)) > 0) && (n != -1))
 		if (write(f2, buf, n) != n)
 			err(f2, 'w', argv[2]);
 	if (close(f1) == -1)
