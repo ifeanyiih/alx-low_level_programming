@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDOUT_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	f1 = open(argv[1], O_RDONLY);
@@ -53,17 +53,17 @@ void err(int fd, char mode, char *fn)
 {
 	if (mode == 'r')
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", fn);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", fn);
 		exit(98);
 	}
 	if (mode == 'w')
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", fn);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fn);
 		exit(99);
 	}
 	if (mode == 'c')
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
