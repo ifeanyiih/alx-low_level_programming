@@ -3,6 +3,8 @@
 #define PERM 0664
 #define BUFSIZE 1024
 
+void err(int fd, char mode, char *fn);
+
 /**
 * main - copies the content of a file to another file
 * @argc: no. of command line args
@@ -22,35 +24,46 @@ int main(int argc, char *argv[])
 	}
 	f1 = open(argv[1], O_RDONLY);
 	if (f1 == -1)
-	{
-		dprintf(STDOUT_FILENO, "Error: can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	f2 = open(argv[2], O_WRONLY);
+		err(f1, 'r', argv[1]);
+	f2 = open(argv[2], O_WRONLY | O_TRUNC);
 	if (f2 == -1)
+	{
 		f2 = open(argv[2], O_WRONLY | O_CREAT, PERM);
-	if (f2 == -1)
-	{
-		dprintf(STDOUT_FILENO, "Error: can't write to %s\n", argv[2]);
-		exit(99);
+		if (f2 == -1)
+			err(f2, 'w', argv[2]);
 	}
 
 	while ((n = read(f1, buf, BUFSIZE)) > 0)
 		if (write(f2, buf, n) != n)
-		{
-			dprintf(STDOUT_FILENO, "Error: can't write to %s\n", argv[2]);
-			exit(99);
-		}
+			err(f2, 'w', argv[2]);
 	if (close(f1) == -1)
-	{
-		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", f1);
-		exit(100);
-	}
+		err(f1, 'c', NULL);
 	if (close(f2) == -1)
-	{
-		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", f2);
-		exit(100);
-	}
+		err(f2, 'c', NULL);
 	return (0);
 }
 
+/**
+* err - handle errors
+* @fd: file descriptor
+* @mode: fd mode
+* @fn: filename
+*/
+void err(int fd, char mode, char *fn)
+{
+	if (mode == 'r')
+	{
+		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", fn);
+		exit(98);
+	}
+	if (mode == 'w')
+	{
+		dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", fn);
+		exit(99);
+	}
+	if (mode == 'c')
+	{
+		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+}
