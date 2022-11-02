@@ -36,6 +36,8 @@ int main(int argc, char *argv[])
 	while (((n = read(f1, buf, BUFSIZE)) > 0) && (n != -1))
 		if (write(f2, buf, n) != n)
 			err(f2, 'w', argv[2]);
+	if (n == -1)
+		err(f1, 'r', argv[1]);
 	if (close(f1) == -1)
 		err(f1, 'c', NULL);
 	if (close(f2) == -1)
