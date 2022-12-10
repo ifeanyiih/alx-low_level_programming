@@ -24,7 +24,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	while (i < idx && mv != NULL && mv->next != NULL)
 		++i, mv = mv->next;
 	if (i == idx && node != NULL)
-		ins_item(node, mv, h);	
+		ins_item(node, mv, h);
 	else if (i == idx - 1 && node != NULL)
 	{
 		node->prev = mv;
