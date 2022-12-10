@@ -46,7 +46,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		mv->next = node;
 		node->next = NULL;
 	}
-	else
+	else if (node != NULL)
 		free(node);
-	return (NULL || node);
+	return (node);
 }
