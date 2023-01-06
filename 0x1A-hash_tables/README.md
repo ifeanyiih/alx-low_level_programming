@@ -5,3 +5,4 @@ Below is a list of files in this directory
 
 ---
 - **0-hash_table_create.c**: a function that creates a hash table.
+- **1-djb2.c**: a hash function implementing the djb2 algorithm
