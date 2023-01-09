@@ -1,4 +1,6 @@
 #include "hash_tables.h"
+hash_node_t *find_node(hash_table_t *ht, char *key);
+
 
 /**
  * hash_table_set - adds an element to the hash table
@@ -19,25 +21,58 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	if ((char *)key == NULL)
 		return (0);
-	if (*key == '\0')
-		return (0);
-	node = malloc(sizeof(hash_node_t));
-	if (node == NULL)
-		return (0);
 	if (strcmp(key, "") == 0)
 		return (0);
-	sp = strdup(key);
-	if (sp == NULL)
-		return (1);
-	node->key = sp;
 	index = key_index((unsigned char *)key, ht->size);
-	if (node->value != NULL)
+	if (ht->array[index] == NULL)
+	{
+		node = malloc(sizeof(hash_node_t));
+		if (node == NULL)
+			return (0);
+		sp = strdup(key);
+		if (sp == NULL)
+			return (0);
+		node->key = sp;
+		sp = strdup(value);
+		if (sp == NULL)
+			return (0);
+		node->value = sp;
+		node->next = ht->array[index];
+		ht->array[index] = node;
+	}
+	else
+	{
+		node = find_node(ht, (char *)key);
 		free(node->value);
-	sp = strdup(value);
-	if (sp == NULL)
-		return (1);
-	node->value = sp;
-	node->next = ht->array[index];
-	ht->array[index] = node;
+		sp = strdup(value);
+		node->value = sp;
+	}
 	return (1);
+}
+
+
+/**
+ * find_node - finds a node with key in a hash_table
+ * @ht: hash table
+ * @key: the key
+ * Return: a pointer to node, otherwise NULL
+ */
+hash_node_t *find_node(hash_table_t *ht, char *key)
+{
+	unsigned long int index;
+	hash_node_t *node;
+
+	if (ht == NULL)
+		return (NULL);
+	if (key == NULL)
+		return (NULL);
+	index = key_index((unsigned char *)key, ht->size);
+	node = ht->array[index];
+	while (node != NULL)
+	{
+		if (strcmp(key, node->key) == 0)
+			return (node);
+		node = node->next;
+	}
+	return (NULL);
 }
