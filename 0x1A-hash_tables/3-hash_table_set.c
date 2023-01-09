@@ -34,6 +34,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (v_cpy == NULL)
 		return (0);
 	strcpy(v_cpy, value);
+	if (node->value != NULL)
+		free(node->value);
 	node->value = v_cpy;
 	node->next = ht->array[index];
 	ht->array[index] = node;
