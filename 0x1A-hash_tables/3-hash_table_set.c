@@ -24,7 +24,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (strcmp(key, "") == 0)
 		return (0);
 	index = key_index((unsigned char *)key, ht->size);
-	if (ht->array[index] == NULL)
+	node = find_node(ht, (char *)key);
+	if (node != NULL)
+	{
+		free(node->value);
+		sp = strdup(value);
+		node->value = sp;
+	}
+	else
 	{
 		node = malloc(sizeof(hash_node_t));
 		if (node == NULL)
@@ -39,13 +46,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		node->value = sp;
 		node->next = ht->array[index];
 		ht->array[index] = node;
-	}
-	else
-	{
-		node = find_node(ht, (char *)key);
-		free(node->value);
-		sp = strdup(value);
-		node->value = sp;
+
 	}
 	return (1);
 }
