@@ -9,3 +9,4 @@ Below is a list of files in this directory
 - **2-key_index.c**: a function that gives the index of a key.
 - **3-hash_table_set.c**: adds an element to the hash table.
 - **4-hash_table_get.c**: a function that retrieves a value associated with a key.
+- **5-hash_table_print.c**: a function that prints a hash table.
