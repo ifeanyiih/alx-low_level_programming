@@ -48,7 +48,7 @@ void print_list(hash_node_t *list)
 	node = list;
 	while (node != NULL)
 	{
-		printf("'%s': '%s'", node->key, node->value);
+		printf("'%s':'%s'", node->key, node->value);
 		if (node->next != NULL)
 			printf(", ");
 		node = node->next;
