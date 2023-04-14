@@ -13,29 +13,27 @@ int minimum(int, int);
 */
 int jump_search(int *array, size_t size, int value)
 {
+	int left, right, jump, i;
+
 	if (array == NULL)
-	{
 		return (-1);
-	}
 
-	int jump = sqrt(size);
-	int left = 0;
-	int right = jump;
+	jump = sqrt(size);
 
-	while (right < size && array[right] < value)
+	left = right = 0;
+	while (right < (int) size && array[right] < value)
 	{
-		printf("Comparing value %d at index %d\n", array[right], right);
 		left = right;
+		printf("Value checked array[%d] = [%d]\n", right, array[right]);
 		right += jump;
 	}
 
-	for (int i = left; i < right && i < size; i++)
+	printf("Value found between indexes [%d] and [%d]\n", left, right);
+	for (i = left; i < minimum(right, (int) size); ++i)
 	{
-		printf("Comparing value %d at index %d\n", array[i], i);
+		printf("Value checked array[%d] = [%d]\n", i, array[i]);
 		if (array[i] == value)
-		{
 			return (i);
-		}
 	}
 
 	return (-1);
