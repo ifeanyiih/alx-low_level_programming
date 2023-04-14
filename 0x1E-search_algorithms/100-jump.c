@@ -13,52 +13,32 @@ int minimum(int, int);
 */
 int jump_search(int *array, size_t size, int value)
 {
-	int a, b, index, prev;
-
 	if (array == NULL)
-		return (-1);
-	a = 0;
-	b = sqrt(size);
-	index = minimum(b, (int) size) - 1;
-	while (array[index] < value)
-	{
-		prev = a;
-		printf("Value checked array[%d] = [%d]\n", a, array[a]);
-		a = b;
-		b += sqrt(size);
-		index = minimum(b, (int) size) - 1;
-		if (a >= (int) size)
-			return (-1);
-	}
-
-	if (a == 0)
-	{
-		printf("Value checked array[%d] = [%d]\n", a, array[a]);
-		printf("Value between indexes [%d] and [%d]\n", a, b);
-	}
-	else
-	{
-		printf("Value between indexes [%d] and [%d]\n", prev, a);
-		a = prev;
-	}
-	while (array[a] < value)
-	{
-		printf("Value checked array[%d] = [%d]\n", a, array[a]);
-		a += 1;
-		if (a == minimum(b, size))
-			return (-1);
-	}
-
-
-	if (array[a] == value)
-	{
-		printf("Value checked array[%d] = [%d]\n", a, array[a]);
-		return (a);
-	}
-	else
 	{
 		return (-1);
 	}
+
+	int jump = sqrt(size);
+	int left = 0;
+	int right = jump;
+
+	while (right < size && array[right] < value)
+	{
+		printf("Comparing value %d at index %d\n", array[right], right);
+		left = right;
+		right += jump;
+	}
+
+	for (int i = left; i < right && i < size; i++)
+	{
+		printf("Comparing value %d at index %d\n", array[i], i);
+		if (array[i] == value)
+		{
+			return (i);
+		}
+	}
+
+	return (-1);
 }
 
 /**
